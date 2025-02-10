@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 import requests
 
-app = Flask(name)
+app = Flask(name)  # FIXED THIS LINE
 
 INSTAGRAM_URL = "https://www.instagram.com/"
 
@@ -23,5 +23,5 @@ def check():
     is_available = check_username(username)
     return jsonify({"username": username, "available": is_available})
 
-if name == "main":
+if name == "main":  # FIXED THIS LINE
     app.run(debug=True, host="0.0.0.0", port=5000)
